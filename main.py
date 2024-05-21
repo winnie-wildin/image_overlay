@@ -7,7 +7,6 @@ import comfy.utils
 from ess_utils import MAX_RESOLUTION, tensor2pil, pil2tensor
 
 class apply_overlay_image:
-
     @classmethod
     def INPUT_TYPES(cls):
         return {
@@ -26,10 +25,10 @@ class apply_overlay_image:
             },
             "optional": {"optional_mask": ("MASK",),}
         }
-
+    RETURN_NAMES = ("image",)
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "apply_overlay_image"
-    CATEGORY = "Image_overlay/Image"
+    CATEGORY = "Image_overlay/image"
 
     def apply_overlay_image(self, base_image, overlay_image, overlay_resize, resize_method, rescale_factor,
                             width, height, x_offset, y_offset, rotation, opacity, optional_mask=None):
