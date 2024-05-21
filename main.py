@@ -25,7 +25,7 @@ class apply_overlay_image:
             },
             "optional": {"optional_mask": ("MASK",),}
         }
-    RETURN_NAMES = ("image",)
+    RETURN_NAMES = ("base_image",)
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "apply_overlay_image"
     CATEGORY = "Image_overlay/image"
